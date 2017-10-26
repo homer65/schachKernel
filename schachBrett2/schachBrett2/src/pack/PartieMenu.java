@@ -130,7 +130,7 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 								String[] values = {"Dame","Turm","Laeufer","Springer"};
 								Object selected = JOptionPane.showInputDialog(
 										null,
-										"Bitte Figur auswählen",
+										"Bitte Figur aussuchen",
 										"?",
 										JOptionPane.DEFAULT_OPTION,
 										null,
@@ -189,9 +189,9 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 				boolean gueltig = regeln.istHalbZugGueltig(partie,zug);
 				if (gueltig)
 				{
-					partie.addHalbZug(zug);
-					String text = zug.getNotation();
+					String text = partie.getNotation(zug);
 					lab1.setText(text);
+					partie.addHalbZug(zug);
 				}
 				else
 				{
