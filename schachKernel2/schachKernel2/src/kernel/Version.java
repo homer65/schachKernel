@@ -3,6 +3,6 @@ public class Version
 {
 	public String getVersion()
 	{
-		return "0.26 - 26.10.2017";
+		return "0.27 - 26.10.2017";
 	}
 }

@@ -231,4 +231,29 @@ public class SimplePartie implements Partie,Serializable
 		}
 		return erg;
 	}
+	@Override
+	public String getNotation() 
+	{
+		String erg = "";
+		Partie tpartie = factory.getPartie();
+		int lfdnr = 0;
+		boolean ungerade = false;
+		for (int i=0;i<zuege.size();i++)
+		{
+			Zug zug = zuege.get(i);
+			if (ungerade)
+			{
+				ungerade = false;
+				erg += " " + tpartie.getNotation(zug) + "\n";
+			}
+			else
+			{
+				ungerade = true;
+				lfdnr++;
+				erg += lfdnr + ". " + tpartie.getNotation(zug); 
+			}
+			tpartie.addHalbZug(zug);
+		}
+		return erg;
+	}
 }

@@ -12,4 +12,5 @@ public interface Partie
 	public Partie einZugBack();
 	public Zug letzterZug();
 	public String getNotation(Zug zug);
+	public String getNotation();
 }

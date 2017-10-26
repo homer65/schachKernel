@@ -138,7 +138,7 @@ public class SimpleFigur implements Figur,Serializable
 		if (typ == 4 && farbe == 1) erg += "T";
 		if (typ == 5 && farbe == 1) erg += "D";
 		if (typ == 6 && farbe == 1) erg += "K";
-		if (typ == 1 && farbe == 2) erg += "B";
+		if (typ == 1 && farbe == 2) erg += " ";
 		if (typ == 2 && farbe == 2) erg += "S";
 		if (typ == 3 && farbe == 2) erg += "L";
 		if (typ == 4 && farbe == 2) erg += "T";
