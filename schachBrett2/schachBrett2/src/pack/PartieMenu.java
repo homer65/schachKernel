@@ -127,7 +127,7 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 								Figur weisseDame = factory.getFigur();
 								weisseDame.setWeiss();
 								weisseDame.setDame();
-								String[] values = {"Dame","Turm","Läufer","Springer"};
+								String[] values = {"Dame","Turm","Laeufer","Springer"};
 								Object selected = JOptionPane.showInputDialog(
 										null,
 										"Bitte Figur auswählen",
@@ -141,7 +141,7 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 									String s = selected.toString();
 									System.out.println("PartieMenu:event:Neue Figur:" + s);
 									if (s.equals("Turm")) weisseDame.setTurm();
-									if (s.equals("Läufer")) weisseDame.setLaeufer();
+									if (s.equals("Laeufer")) weisseDame.setLaeufer();
 									if (s.equals("Springer")) weisseDame.setSpringer();
 								}
 								nf = weisseDame;
@@ -160,10 +160,10 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 								Figur schwarzeDame = factory.getFigur();
 								schwarzeDame.setSchwarz();
 								schwarzeDame.setDame();
-								String[] values = {"Dame","Turm","Läufer","Springer"};
+								String[] values = {"Dame","Turm","Laeufer","Springer"};
 								Object selected = JOptionPane.showInputDialog(
 										null,
-										"Bitte Figur auswählen",
+										"Bitte Figur aussuchen",
 										"?",
 										JOptionPane.DEFAULT_OPTION,
 										null,
@@ -174,7 +174,7 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 									String s = selected.toString();
 									System.out.println("PartieMenu:event:Neue Figur:" + s);
 									if (s.equals("Turm")) schwarzeDame.setTurm();
-									if (s.equals("Läufer")) schwarzeDame.setLaeufer();
+									if (s.equals("Laeufer")) schwarzeDame.setLaeufer();
 									if (s.equals("Springer")) schwarzeDame.setSpringer();
 								}
 								nf = schwarzeDame;
@@ -186,16 +186,6 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 				zug.setVon(von);
 				zug.setNach(nach);
 				zug.setNeueFigur(nf);
-				if (nf != null)
-				{
-					Feld v1 = zug.getVon();
-					Feld n1 = zug.getNach();
-					int v1x = v1.getX();
-					int v1y = v1.getY();
-					int n1x = n1.getX();
-					int n1y = n1.getY();
-					System.out.println("PartieMenu:event:" + v1x + ":" + v1y + " # " + n1x + ":" + n1y);
-				}
 				boolean gueltig = regeln.istHalbZugGueltig(partie,zug);
 				if (gueltig)
 				{
