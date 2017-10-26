@@ -15,6 +15,7 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 	private JButton butt3 = new JButton("Patt?");
 	private JButton butt4 = new JButton("Drehen");
 	private JButton butt5 = new JButton("Kernel");
+	private JButton butt6 = new JButton("Notation");
 	private JPanel cpan = null;
 	private JPanel span = null;
 	private JPanel npan = null;
@@ -33,6 +34,7 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 		butt3.addActionListener(this);
 		butt4.addActionListener(this);
 		butt5.addActionListener(this);
+		butt6.addActionListener(this);
 		init();
 	}
 	public void init()
@@ -44,11 +46,12 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 		span.add(butt1,BorderLayout.WEST);
 		span.add(lab1,BorderLayout.CENTER);
 		npan = new JPanel();
-		npan.setLayout(new GridLayout(1,4));
+		npan.setLayout(new GridLayout(1,5));
 		npan.add(butt2);
 		npan.add(butt3);
 		npan.add(butt4);
 		npan.add(butt5);
+		npan.add(butt6);
 		cpan = new JPanel();
 		cpan.setLayout(new BorderLayout());
 		cpan.add(bpan,BorderLayout.CENTER);
@@ -95,6 +98,11 @@ public class PartieMenu extends Menu implements ActionListener,BrettListener
 			Version version = new Version();
 			String info = version.getVersion();
 			System.out.println(info);
+		}
+		if (source == butt6)
+		{
+			String text = partie.getNotation();
+			System.out.println(text);
 		}
 	}
 	@Override
