@@ -132,18 +132,18 @@ public class SimpleFigur implements Figur,Serializable
 	public String getNotation()
 	{
 		String erg = "";
-		if (typ == 1 && farbe == 1) erg += "wB";
-		if (typ == 2 && farbe == 1) erg += "wS";
-		if (typ == 3 && farbe == 1) erg += "wL";
-		if (typ == 4 && farbe == 1) erg += "wT";
-		if (typ == 5 && farbe == 1) erg += "wD";
-		if (typ == 6 && farbe == 1) erg += "wK";
-		if (typ == 1 && farbe == 2) erg += "sB";
-		if (typ == 2 && farbe == 2) erg += "sS";
-		if (typ == 3 && farbe == 2) erg += "sL";
-		if (typ == 4 && farbe == 2) erg += "sT";
-		if (typ == 5 && farbe == 2) erg += "sD";
-		if (typ == 6 && farbe == 2) erg += "sK";
+		if (typ == 1 && farbe == 1) erg += " ";
+		if (typ == 2 && farbe == 1) erg += "S";
+		if (typ == 3 && farbe == 1) erg += "L";
+		if (typ == 4 && farbe == 1) erg += "T";
+		if (typ == 5 && farbe == 1) erg += "D";
+		if (typ == 6 && farbe == 1) erg += "K";
+		if (typ == 1 && farbe == 2) erg += "B";
+		if (typ == 2 && farbe == 2) erg += "S";
+		if (typ == 3 && farbe == 2) erg += "L";
+		if (typ == 4 && farbe == 2) erg += "T";
+		if (typ == 5 && farbe == 2) erg += "D";
+		if (typ == 6 && farbe == 2) erg += "K";
 		return erg;
 	}
 }

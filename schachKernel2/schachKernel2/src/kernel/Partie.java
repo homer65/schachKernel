@@ -11,4 +11,5 @@ public interface Partie
 	public boolean wurdeSchwarzerKoenigBewegt();
 	public Partie einZugBack();
 	public Zug letzterZug();
+	public String getNotation(Zug zug);
 }

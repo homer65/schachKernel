@@ -210,4 +210,25 @@ public class SimplePartie implements Partie,Serializable
 		}
 		return erg;
 	}
+	@Override
+	public String getNotation(Zug zug) 
+	{
+		String erg = "";
+		Feld von = zug.getVon();
+		Feld nach = zug.getNach();
+		Figur vfigur = brett.getFigur(von);
+		Figur nfigur = brett.getFigur(nach);
+		Figur neueFigur = zug.getNeueFigur();
+		erg += vfigur.getNotation();
+		erg += von.getNotation();
+		String x = "-";
+		if (!nfigur.istFrei()) x = "x";
+		erg += x;
+		erg += nach.getNotation();
+		if (neueFigur != null)
+		{
+			erg += "/" + neueFigur.getNotation();
+		}
+		return erg;
+	}
 }

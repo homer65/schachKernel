@@ -49,7 +49,7 @@ public class SimpleZug implements Zug,Serializable
 		{
 			if (!neueFigur.istFrei());
 			{
-				erg += ":";
+				erg += "/";
 				erg += neueFigur.getNotation();
 			}
 		}
